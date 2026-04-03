@@ -45,7 +45,7 @@
                 <!-- Email -->
                 <div class="mb-4">
                     <label class="block text-gray-600 mb-2 font-semibold ">Email</label>
-                    <input type="email" name="email" placeholder="Enter email"
+                    <input type="email" name="username" placeholder="Enter email"
                         class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
                 </div>
 
