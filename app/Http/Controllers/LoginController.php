@@ -19,7 +19,7 @@ public function login(Request $request)
 
     $credentials = $request->only('username', 'password');
 
-    if (Auth::attempt($credentials)) {
+    if (Auth::guard('admin')->attempt($credentials)) {
         $request->session()->regenerate();
         return redirect()->route('dashboard');
     } else {
