@@ -356,6 +356,21 @@
             <!-- SCROLLABLE MAIN -->
             <div class="main-scroll" style="flex:1;overflow-y:auto;padding:18px 20px;">
 
+                <!--- Success Banner ---->
+                @if (session('success'))
+                    <div class="success-banner"
+                        style="background:#10b981;border:1px solid rgba(16,185,129,0.2);color:#fff;padding:12px 16px;border-radius:8px;margin-bottom:18px;">
+                        {{ session('success') }}
+                    </div>
+
+                    <script>
+                        setTimeout(() => {
+                            const banner = document.querySelector('.success-banner');
+                            if (banner) banner.style.display = 'none';
+                        }, 4000);
+                    </script>
+                @endif
+
                 <!-- WELCOME BANNER -->
                 <div
                     style="position:relative;border-radius:16px;padding:20px 24px;color:#fff;display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;overflow:hidden;background:linear-gradient(120deg,#0e1e45 0%,#1d3577 45%,#2a4a9e 75%,#4d9de0 100%);">
