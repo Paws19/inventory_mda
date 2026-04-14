@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StockFlow — Inventory Dashboard</title>
+    <title>Inventory Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap"
@@ -160,15 +160,11 @@
                 <div style="display:flex;align-items:center;gap:10px;">
                     <div
                         style="width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#4d9de0,#2a4a9e);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white"
-                            stroke-width="2.2" stroke-linecap="round">
-                            <rect x="2" y="3" width="20" height="14" rx="2" />
-                            <path d="M8 21h8M12 17v4" />
-                        </svg>
+                        <img src="{{ asset('img/logo.png') }}" alt="">
                     </div>
                     <div>
                         <div style="color:#fff;font-size:14.5px;font-weight:700;letter-spacing:-0.3px;line-height:1;">
-                            StockFlow</div>
+                            MDA</div>
                         <div
                             style="font-family:'DM Mono',monospace;font-size:9px;color:rgba(255,255,255,0.38);letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;">
                             Inventory</div>
@@ -193,7 +189,7 @@
                     Dashboard
                 </a>
 
-                <a href="#"
+                <a href="{{ route('side_bar') }}"
                     style="display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:8px;margin-bottom:2px;color:rgba(255,255,255,0.52);font-size:13px;font-weight:500;text-decoration:none;"
                     onmouseover="this.style.background='rgba(255,255,255,0.07)';this.style.color='rgba(255,255,255,0.85)'"
                     onmouseout="this.style.background='';this.style.color='rgba(255,255,255,0.52)'">
@@ -303,7 +299,7 @@
                     <div style="min-width:0;">
                         <div
                             style="color:rgba(255,255,255,0.85);font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
-                            Juan Dela Cruz</div>
+                            Rogelio J. Cerenado</div>
                         <div style="color:rgba(255,255,255,0.32);font-size:10.5px;">Administrator</div>
                     </div>
                 </div>

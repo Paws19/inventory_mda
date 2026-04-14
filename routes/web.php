@@ -8,6 +8,7 @@ Route::post('/login', [App\Http\Controllers\LoginController::class, 'login'])->n
 Route::middleware(['auth:admin'])->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\RedirectController\GetController::class, 'dashboard'])->name('dashboard');
     Route::post('add-item', [App\Http\Controllers\ItemsController::class, 'addItems'])->name('items.store');
+    Route::get('/side_bar', [App\Http\Controllers\RedirectController\GetController::class, 'side_bar'])->name('side_bar');
 
     
 });
