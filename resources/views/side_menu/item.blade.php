@@ -16,15 +16,16 @@
             --accent: #4a90e2;
             --accent-bright: #5ba3f5;
             --gold: #f0b429;
+            --gold-light: #fde68a;
             --surface: #f0f4ff;
             --surface-card: #ffffff;
             --text-primary: #0d1c3d;
             --text-secondary: #4a5680;
             --text-muted: #8a94b0;
             --border: #d6e0ff;
-            --shadow-sm: 0 2px 8px rgba(29, 53, 119, 0.08);
-            --shadow-md: 0 8px 32px rgba(29, 53, 119, 0.13);
-            --shadow-lg: 0 20px 60px rgba(29, 53, 119, 0.18);
+            --shadow-sm: 0 2px 8px rgba(29, 53, 119, .08);
+            --shadow-md: 0 8px 32px rgba(29, 53, 119, .13);
+            --shadow-lg: 0 20px 60px rgba(29, 53, 119, .18);
             --radius: 16px;
             --radius-sm: 10px;
         }
@@ -43,14 +44,13 @@
             overflow-x: hidden;
         }
 
-        /* ── BACKGROUND MESH ── */
         body::before {
             content: '';
             position: fixed;
             inset: 0;
             background:
-                radial-gradient(ellipse 80% 60% at 10% 0%, rgba(29, 53, 119, 0.12) 0%, transparent 60%),
-                radial-gradient(ellipse 60% 50% at 90% 100%, rgba(74, 144, 226, 0.10) 0%, transparent 60%);
+                radial-gradient(ellipse 80% 60% at 10% 0%, rgba(29, 53, 119, .12) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 50% at 90% 100%, rgba(74, 144, 226, .10) 0%, transparent 60%);
             pointer-events: none;
             z-index: 0;
         }
@@ -66,7 +66,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 4px 24px rgba(13, 28, 61, 0.35);
+            box-shadow: 0 4px 24px rgba(13, 28, 61, .35);
         }
 
         .header::after {
@@ -88,8 +88,8 @@
         .header-icon {
             width: 40px;
             height: 40px;
-            background: rgba(255, 255, 255, 0.12);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, .12);
+            border: 1px solid rgba(255, 255, 255, .2);
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -103,7 +103,7 @@
             font-size: 22px;
             font-weight: 800;
             color: white;
-            letter-spacing: -0.3px;
+            letter-spacing: -.3px;
         }
 
         .header h1 span {
@@ -117,13 +117,13 @@
         }
 
         .badge-count {
-            background: rgba(255, 255, 255, 0.15);
-            color: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, .15);
+            color: rgba(255, 255, 255, .85);
             font-size: 12px;
             font-weight: 500;
             padding: 4px 12px;
             border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, .2);
         }
 
         .btn-add {
@@ -139,14 +139,14 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 16px rgba(240, 180, 41, 0.35);
-            letter-spacing: 0.2px;
+            transition: all .2s ease;
+            box-shadow: 0 4px 16px rgba(240, 180, 41, .35);
+            letter-spacing: .2px;
         }
 
         .btn-add:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(240, 180, 41, 0.5);
+            box-shadow: 0 8px 24px rgba(240, 180, 41, .5);
             background: #f7c54d;
         }
 
@@ -194,7 +194,7 @@
             font-size: 14px;
             color: var(--text-primary);
             box-shadow: var(--shadow-sm);
-            transition: all 0.2s ease;
+            transition: all .2s ease;
             outline: none;
         }
 
@@ -204,7 +204,7 @@
 
         .search-wrap input:focus {
             border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.15), var(--shadow-sm);
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, .15), var(--shadow-sm);
         }
 
         .view-toggle {
@@ -223,7 +223,7 @@
             cursor: pointer;
             font-size: 16px;
             color: var(--text-muted);
-            transition: all 0.2s;
+            transition: all .2s;
         }
 
         .view-btn.active {
@@ -273,8 +273,8 @@
             box-shadow: var(--shadow-sm);
             border: 1.5px solid var(--border);
             overflow: hidden;
-            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-            animation: cardIn 0.4s ease both;
+            transition: all .3s cubic-bezier(.34, 1.56, .64, 1);
+            animation: cardIn .4s ease both;
             position: relative;
         }
 
@@ -293,34 +293,33 @@
         .card:hover {
             transform: translateY(-6px);
             box-shadow: var(--shadow-lg);
-            border-color: rgba(74, 144, 226, 0.35);
+            border-color: rgba(74, 144, 226, .35);
         }
 
         .card:nth-child(1) {
-            animation-delay: 0.03s;
+            animation-delay: .03s;
         }
 
         .card:nth-child(2) {
-            animation-delay: 0.07s;
+            animation-delay: .07s;
         }
 
         .card:nth-child(3) {
-            animation-delay: 0.11s;
+            animation-delay: .11s;
         }
 
         .card:nth-child(4) {
-            animation-delay: 0.15s;
+            animation-delay: .15s;
         }
 
         .card:nth-child(5) {
-            animation-delay: 0.19s;
+            animation-delay: .19s;
         }
 
         .card:nth-child(6) {
-            animation-delay: 0.23s;
+            animation-delay: .23s;
         }
 
-        /* IMAGE AREA */
         .card-img-wrap {
             width: 100%;
             height: 180px;
@@ -333,7 +332,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.4s ease;
+            transition: transform .4s ease;
         }
 
         .card:hover .card-img-wrap img {
@@ -354,7 +353,7 @@
 
         .card-img-placeholder .icon {
             font-size: 36px;
-            opacity: 0.4;
+            opacity: .4;
         }
 
         .card-badge {
@@ -366,29 +365,28 @@
             font-size: 11px;
             font-weight: 700;
             font-family: 'Syne', sans-serif;
-            letter-spacing: 0.5px;
+            letter-spacing: .5px;
             backdrop-filter: blur(8px);
         }
 
         .badge-active {
-            background: rgba(46, 204, 113, 0.2);
+            background: rgba(46, 204, 113, .2);
             color: #1a9955;
-            border: 1px solid rgba(46, 204, 113, 0.3);
+            border: 1px solid rgba(46, 204, 113, .3);
         }
 
         .badge-inactive {
-            background: rgba(231, 76, 60, 0.15);
+            background: rgba(231, 76, 60, .15);
             color: #c0392b;
-            border: 1px solid rgba(231, 76, 60, 0.25);
+            border: 1px solid rgba(231, 76, 60, .25);
         }
 
         .badge-default {
-            background: rgba(255, 255, 255, 0.75);
+            background: rgba(255, 255, 255, .75);
             color: var(--text-secondary);
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, .1);
         }
 
-        /* CARD BODY */
         .card-body {
             padding: 18px 20px 20px;
         }
@@ -440,13 +438,13 @@
         }
 
         .field.full-width {
-            grid-column: 1 / -1;
+            grid-column: 1/-1;
         }
 
         .field-label {
             font-size: 10px;
             font-weight: 600;
-            letter-spacing: 0.8px;
+            letter-spacing: .8px;
             text-transform: uppercase;
             color: var(--text-muted);
         }
@@ -462,7 +460,6 @@
             font-weight: 600;
         }
 
-        /* CARD FOOTER */
         .card-footer {
             padding: 12px 20px;
             background: var(--surface);
@@ -476,14 +473,14 @@
             display: inline-flex;
             align-items: center;
             gap: 5px;
-            background: rgba(29, 53, 119, 0.08);
+            background: rgba(29, 53, 119, .08);
             color: var(--navy);
             font-size: 11px;
             font-weight: 600;
             padding: 5px 12px;
             border-radius: 20px;
             font-family: 'Syne', sans-serif;
-            letter-spacing: 0.3px;
+            letter-spacing: .3px;
         }
 
         .card-actions {
@@ -502,7 +499,7 @@
             align-items: center;
             justify-content: center;
             font-size: 13px;
-            transition: all 0.2s;
+            transition: all .2s;
             color: var(--text-muted);
         }
 
@@ -515,7 +512,7 @@
 
         /* ── EMPTY STATE ── */
         .empty-state {
-            grid-column: 1 / -1;
+            grid-column: 1/-1;
             text-align: center;
             padding: 80px 20px;
             color: var(--text-muted);
@@ -524,7 +521,7 @@
         .empty-state .empty-icon {
             font-size: 56px;
             margin-bottom: 16px;
-            opacity: 0.35;
+            opacity: .35;
         }
 
         .empty-state h3 {
@@ -538,7 +535,7 @@
             font-size: 14px;
         }
 
-        /* ── LIST VIEW CARD ── */
+        /* ── LIST VIEW ── */
         .grid.list-view .card {
             display: flex;
             flex-direction: row;
@@ -554,7 +551,6 @@
             flex: 1;
         }
 
-        /* ── SCROLLBAR ── */
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -566,6 +562,392 @@
         ::-webkit-scrollbar-thumb {
             background: var(--border);
             border-radius: 99px;
+        }
+
+        /* ════════════════════════════════
+           REDESIGNED MODALS
+        ════════════════════════════════ */
+
+        /* OVERLAY */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+            background: rgba(13, 28, 61, .55);
+            backdrop-filter: blur(6px);
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn .2s ease;
+        }
+
+        .modal-overlay.open {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* MODAL SHELL */
+        .modal-shell {
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 32px 80px rgba(13, 28, 61, .28);
+            width: min(560px, 94vw);
+            max-height: 90vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            animation: slideUp .3s cubic-bezier(.34, 1.56, .64, 1);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(32px) scale(.97);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* MODAL HEADER */
+        .modal-header {
+            background: linear-gradient(135deg, var(--navy-deeper) 0%, var(--navy) 60%, #264a9e 100%);
+            padding: 22px 28px 20px;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .modal-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), var(--accent-bright), transparent);
+        }
+
+        .modal-header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 4px;
+        }
+
+        .modal-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -.2px;
+        }
+
+        .modal-title span {
+            color: var(--gold);
+        }
+
+        .modal-subtitle {
+            font-size: 13px;
+            color: rgba(255, 255, 255, .55);
+            margin-top: 2px;
+        }
+
+        .modal-close {
+            width: 34px;
+            height: 34px;
+            background: rgba(255, 255, 255, .12);
+            border: 1px solid rgba(255, 255, 255, .2);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: rgba(255, 255, 255, .8);
+            line-height: 1;
+            transition: all .2s;
+            flex-shrink: 0;
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 255, 255, .25);
+            color: #fff;
+        }
+
+        /* MODAL BODY */
+        .modal-body {
+            padding: 28px;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .modal-body::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .modal-body::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 99px;
+        }
+
+        /* VIEW MODAL — IMAGE */
+        .view-img-wrap {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #e8eeff, #d6e0ff);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 22px;
+            position: relative;
+        }
+
+        .view-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .view-img-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .view-img-placeholder span.icon {
+            font-size: 40px;
+            opacity: .35;
+        }
+
+        /* STATUS BADGE in view */
+        .view-status-badge {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            font-family: 'Syne', sans-serif;
+            letter-spacing: .5px;
+            backdrop-filter: blur(8px);
+        }
+
+        /* VIEW TITLE ROW */
+        .view-title-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .view-item-name {
+            font-family: 'Syne', sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--text-primary);
+            flex: 1;
+            line-height: 1.2;
+        }
+
+        .view-qty-badge {
+            background: var(--navy);
+            color: #fff;
+            font-family: 'Syne', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 10px;
+            margin-left: 12px;
+            white-space: nowrap;
+        }
+
+        /* DIVIDER */
+        .modal-divider {
+            height: 1px;
+            background: var(--border);
+            margin: 18px 0;
+        }
+
+        /* FIELD GRID */
+        .modal-fields {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .modal-field {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .modal-field.full {
+            grid-column: 1/-1;
+        }
+
+        .modal-field-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .modal-field-value {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .modal-field-value.hl {
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        /* CATEGORY ROW */
+        .modal-cat-row {
+            margin-top: 20px;
+            padding-top: 18px;
+            border-top: 1.5px solid var(--border);
+        }
+
+        .modal-cat-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(29, 53, 119, .08);
+            color: var(--navy);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 7px 16px;
+            border-radius: 20px;
+            font-family: 'Syne', sans-serif;
+        }
+
+        /* ── EDIT FORM ── */
+        .edit-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
+
+        .form-group.full {
+            grid-column: 1/-1;
+        }
+
+        .form-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .8px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .form-control {
+            padding: 11px 15px;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            color: var(--text-primary);
+            background: #fff;
+            transition: all .2s;
+            outline: none;
+            width: 100%;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, .15);
+        }
+
+        .form-control::placeholder {
+            color: var(--text-muted);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 80px;
+            line-height: 1.5;
+        }
+
+        /* MODAL FOOTER */
+        .modal-footer {
+            padding: 18px 28px;
+            border-top: 1.5px solid var(--border);
+            background: var(--surface);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .btn-cancel {
+            padding: 10px 22px;
+            border-radius: 50px;
+            border: 1.5px solid var(--border);
+            background: #fff;
+            font-family: 'Syne', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all .2s;
+        }
+
+        .btn-cancel:hover {
+            background: var(--surface);
+            border-color: var(--accent);
+            color: var(--navy);
+        }
+
+        .btn-save {
+            padding: 10px 28px;
+            border-radius: 50px;
+            border: none;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--accent) 100%);
+            font-family: 'Syne', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: #fff;
+            cursor: pointer;
+            transition: all .2s;
+            box-shadow: 0 4px 16px rgba(29, 53, 119, .25);
+        }
+
+        .btn-save:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(29, 53, 119, .35);
         }
     </style>
 </head>
@@ -608,11 +990,9 @@
         <!-- ITEMS GRID -->
         <div class="grid" id="itemGrid">
 
-            {{-- ========================= BLADE LOOP ========================= --}}
             @forelse ($items as $item)
                 <div class="card item-card">
 
-                    {{-- IMAGE --}}
                     <div class="card-img-wrap">
                         @if ($item->image)
                             <img src="{{ asset('storage/' . $item->image) }}" alt="{{ $item->item_name }}">
@@ -622,8 +1002,6 @@
                                 <span>No Image</span>
                             </div>
                         @endif
-
-                        {{-- STATUS BADGE --}}
                         @php
                             $statusClass = match (strtolower($item->status ?? '')) {
                                 'active', 'available', 'good' => 'badge-active',
@@ -634,13 +1012,11 @@
                         <span class="card-badge {{ $statusClass }}">{{ $item->status ?? '—' }}</span>
                     </div>
 
-                    {{-- BODY --}}
                     <div class="card-body">
                         <div class="card-header-row">
                             <div class="card-title">{{ $item->item_name }}</div>
                             <div class="card-qty">× {{ $item->quantity ?? 0 }}</div>
                         </div>
-
                         <div class="card-fields">
                             <div class="field">
                                 <span class="field-label">Condition</span>
@@ -671,7 +1047,6 @@
                         </div>
                     </div>
 
-                    {{-- FOOTER --}}
                     <div class="card-footer">
                         <span class="category-pill">
                             🏷️
@@ -683,9 +1058,9 @@
                         </span>
                         <div class="card-actions">
                             <button class="action-btn" title="View"
-                                onclick="viewItem({{ $item->id }})">👁</button>
+                                onclick='openView(@json($item))'>👁</button>
                             <button class="action-btn" title="Edit"
-                                onclick="editItem({{ $item->id }})">✏️</button>
+                                onclick='openEdit(@json($item))'>✏️</button>
                         </div>
                     </div>
 
@@ -698,19 +1073,237 @@
                 </div>
             @endforelse
 
+        </div><!-- /#itemGrid -->
+    </div><!-- /.container -->
+
+
+    <!-- ══════════════════════════════════════
+     VIEW MODAL
+══════════════════════════════════════ -->
+    <div class="modal-overlay" id="viewOverlay" onclick="overlayClose('viewOverlay')">
+        <div class="modal-shell" onclick="event.stopPropagation()">
+
+            <div class="modal-header">
+                <div class="modal-header-top">
+                    <div>
+                        <div class="modal-title">Item <span>Details</span></div>
+                        <div class="modal-subtitle">Read-only overview of this inventory item</div>
+                    </div>
+                    <button class="modal-close" onclick="closeOverlay('viewOverlay')">✕</button>
+                </div>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="view-img-wrap" id="view_image_wrap">
+                    <div class="view-img-placeholder">
+                        <span class="icon">🖼️</span>
+                        <span>No Image</span>
+                    </div>
+                </div>
+
+                <div class="view-title-row">
+                    <div class="view-item-name" id="view_item_name">—</div>
+                    <div class="view-qty-badge" id="view_quantity">× 0</div>
+                </div>
+
+                <div class="modal-fields">
+                    <div class="modal-field">
+                        <span class="modal-field-label">Condition</span>
+                        <span class="modal-field-value hl" id="view_condition">—</span>
+                    </div>
+                    <div class="modal-field">
+                        <span class="modal-field-label">Status</span>
+                        <span class="modal-field-value" id="view_status">—</span>
+                    </div>
+                    <div class="modal-field">
+                        <span class="modal-field-label">Location</span>
+                        <span class="modal-field-value" id="view_location">—</span>
+                    </div>
+                    <div class="modal-field">
+                        <span class="modal-field-label">Assigned To</span>
+                        <span class="modal-field-value" id="view_assigned">—</span>
+                    </div>
+                    <div class="modal-field">
+                        <span class="modal-field-label">Purchase Date</span>
+                        <span class="modal-field-value" id="view_purchase">—</span>
+                    </div>
+                    <div class="modal-field">
+                        <span class="modal-field-label">Warranty Expiration</span>
+                        <span class="modal-field-value" id="view_warranty">—</span>
+                    </div>
+                    <div class="modal-field full">
+                        <span class="modal-field-label">Remarks</span>
+                        <span class="modal-field-value" id="view_remarks">—</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-cancel" onclick="closeOverlay('viewOverlay')">Close</button>
+            </div>
         </div>
     </div>
 
+
+    <!-- ══════════════════════════════════════
+     EDIT MODAL
+══════════════════════════════════════ -->
+    <div class="modal-overlay" id="editOverlay" onclick="overlayClose('editOverlay')">
+        <div class="modal-shell" onclick="event.stopPropagation()">
+
+            <div class="modal-header">
+                <div class="modal-header-top">
+                    <div>
+                        <div class="modal-title">Edit <span>Item</span></div>
+                        <div class="modal-subtitle">Update the details for this inventory item</div>
+                    </div>
+                    <button class="modal-close" onclick="closeOverlay('editOverlay')">✕</button>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <form id="editForm" method="POST">
+                    @csrf
+                    @method('PUT')
+                    <input type="hidden" id="edit_id">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Item Name</label>
+                            <input class="form-control" type="text" name="item_name" id="edit_item_name"
+                                placeholder="e.g. MacBook Pro">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Quantity</label>
+                            <input class="form-control" type="number" name="quantity" id="edit_quantity"
+                                placeholder="0" min="0">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Condition</label>
+                            <input class="form-control" type="text" name="condition" id="edit_condition"
+                                placeholder="e.g. Good">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Status</label>
+                            <input class="form-control" type="text" name="status" id="edit_status"
+                                placeholder="e.g. Active">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Location</label>
+                            <input class="form-control" type="text" name="location" id="edit_location"
+                                placeholder="e.g. Storage Room A">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Assigned To</label>
+                            <input class="form-control" type="text" name="assigned_to" id="edit_assigned"
+                                placeholder="e.g. Juan Dela Cruz">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Purchase Date</label>
+                            <input class="form-control" type="date" name="purchase_date" id="edit_purchase">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Warranty Expiration</label>
+                            <input class="form-control" type="date" name="warranty_expiration_date"
+                                id="edit_warranty">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Remarks</label>
+                        <textarea class="form-control" name="remarks" id="edit_remarks" placeholder="Additional notes…"></textarea>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-cancel" onclick="closeOverlay('editOverlay')">Cancel</button>
+                <button class="btn-save" onclick="submitEdit()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+
     <script>
-        // ── COUNT ──
+        /* ── MODAL HELPERS ── */
+        function openOverlay(id) {
+            document.getElementById(id).classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeOverlay(id) {
+            document.getElementById(id).classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        function overlayClose(id) {
+            // only close if click was directly on overlay (not shell)
+            closeOverlay(id);
+        }
+
+        /* ── VIEW MODAL ── */
+        function openView(item) {
+            // image
+            const wrap = document.getElementById('view_image_wrap');
+            if (item.image) {
+                wrap.innerHTML = `<img src="/storage/${item.image}" alt="${item.item_name}">`;
+            } else {
+                wrap.innerHTML =
+                    `<div class="view-img-placeholder"><span class="icon">🖼️</span><span>No Image</span></div>`;
+            }
+
+            document.getElementById('view_item_name').innerText = item.item_name ?? '—';
+            document.getElementById('view_quantity').innerText = '× ' + (item.quantity ?? 0);
+            document.getElementById('view_condition').innerText = item.condition ?? '—';
+            document.getElementById('view_status').innerText = item.status ?? '—';
+            document.getElementById('view_location').innerText = item.location ?? '—';
+            document.getElementById('view_assigned').innerText = item.assigned_to ?? '—';
+            document.getElementById('view_purchase').innerText = item.purchase_date ?? '—';
+            document.getElementById('view_warranty').innerText = item.warranty_expiration_date ?? '—';
+            document.getElementById('view_remarks').innerText = item.remarks ?? '—';
+
+            openOverlay('viewOverlay');
+        }
+
+        /* ── EDIT MODAL ── */
+        function openEdit(item) {
+            document.getElementById('edit_id').value = item.id;
+            document.getElementById('edit_item_name').value = item.item_name ?? '';
+            document.getElementById('edit_quantity').value = item.quantity ?? 0;
+            document.getElementById('edit_condition').value = item.condition ?? '';
+            document.getElementById('edit_status').value = item.status ?? '';
+            document.getElementById('edit_location').value = item.location ?? '';
+            document.getElementById('edit_assigned').value = item.assigned_to ?? '';
+            document.getElementById('edit_purchase').value = item.purchase_date ?? '';
+            document.getElementById('edit_warranty').value = item.warranty_expiration_date ?? '';
+            document.getElementById('edit_remarks').value = item.remarks ?? '';
+            document.getElementById('editForm').action = `/items/${item.id}`;
+            openOverlay('editOverlay');
+        }
+
+        function submitEdit() {
+            document.getElementById('editForm').submit();
+        }
+
+        /* ── COUNT ── */
         function updateCount() {
-            const visible = [...document.querySelectorAll('.item-card')]
-                .filter(c => c.style.display !== 'none').length;
+            const visible = [...document.querySelectorAll('.item-card')].filter(c => c.style.display !== 'none').length;
             document.getElementById('itemCount').textContent = visible + ' item' + (visible !== 1 ? 's' : '');
         }
         updateCount();
 
-        // ── SEARCH ──
+        /* ── SEARCH ── */
         function searchItems() {
             const q = document.getElementById('searchInput').value.toLowerCase();
             document.querySelectorAll('.item-card').forEach(card => {
@@ -719,7 +1312,7 @@
             updateCount();
         }
 
-        // ── VIEW TOGGLE ──
+        /* ── VIEW TOGGLE ── */
         function setView(mode) {
             const grid = document.getElementById('itemGrid');
             const gridBtn = document.getElementById('gridBtn');
@@ -735,17 +1328,9 @@
             }
         }
 
-        // ── ACTIONS ──
+        /* ── ADD ITEM ── */
         function addItem() {
             window.location.href = '/items/create';
-        }
-
-        function viewItem(id) {
-            window.location.href = `/items/${id}`;
-        }
-
-        function editItem(id) {
-            window.location.href = `/items/${id}/edit`;
         }
     </script>
 
